@@ -1,0 +1,20 @@
+/* Example Tailwind CSS */
+.toggle-track {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-handle {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark .toggle-track {
+  background-color: #4a5568; /* Dark mode background color */
+}
+
+.dark .toggle-handle {
+  transform: translateX(6px); /* Adjust handle position for dark mode */
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}

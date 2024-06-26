@@ -1,0 +1,26 @@
+<div class="theme flex items-center space-x-2 relative">
+  <!-- Icon for light mode (wb_sunny) -->
+  <mat-icon
+    class="text-md text-yellow-500 dark:text-yellow-300 absolute -right-1 z-10 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
+    [style.display]="currentTheme ? 'none' : 'block'">
+    wb_sunny
+  </mat-icon>
+
+  <!-- Custom toggle switch -->
+  <label class="flex items-center cursor-pointer">
+    <!-- Input checkbox for toggle -->
+    <input type="checkbox" class="hidden" [(ngModel)]="currentTheme" (change)="toggleTheme($event)">
+    <div class="toggle-track bg-gray-400 dark:bg-gray-600 w-20 h-8 rounded-full relative shadow-sm">
+      <div
+        class="toggle-handle absolute top-1 dark:bg-white ml-1 bg-gray-700 w-9 h-6 rounded-full transition duration-300 transform"
+        [class.translate-x-full]="currentTheme"></div>
+    </div>
+  </label>
+
+  <!-- Icon for dark mode (brightness_2) -->
+  <mat-icon
+    class="text-md text-blue-500 dark:text-blue-300 absolute left-4 z-10 transform -translate-x-1/2 top-1/2 -translate-y-1/2"
+    [style.display]="currentTheme ? 'block' : 'none'">
+    brightness_2
+  </mat-icon>
+</div>
