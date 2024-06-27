@@ -1,0 +1,36 @@
+.scheme-toggle {
+  .menu-box {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  button.mat-button {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .mat-menu-content {
+    padding: 0;
+  }
+
+  .mat-menu-item {
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+  }
+
+  .mat-menu-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  // Box shadow and border color change on hover
+  .menu-box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #ccc;
+  }
+}

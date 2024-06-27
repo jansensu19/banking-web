@@ -1,0 +1,15 @@
+
+  <div class="menu-box">
+    <button mat-button class="capitalize" [matMenuTriggerFor]="menu">
+      <span class="text-primary">Theme:</span> {{ currentThemeScheme }}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+  </div>
+  <mat-menu #menu="matMenu">
+    <div class="menu-box">
+      <button mat-menu-item class="capitalize" *ngFor="let scheme of themeSchemes" (click)="switchTheme(scheme)">
+        {{ scheme }}
+      </button>
+    </div>
+  </mat-menu>
+

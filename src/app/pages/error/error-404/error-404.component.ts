@@ -8,9 +8,6 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
 })
 export class Error404Component
 {
-    /**
-     * Constructor
-     */
     constructor()
     {
     }

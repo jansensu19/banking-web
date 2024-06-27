@@ -1,0 +1,54 @@
+// src/app/core/theme/custom-styles.scss
+
+:root {
+  --primary-color: #FF0000; // default primary color
+  --secondary-color: #FFA27F; // default secondary color
+}
+
+[data-theme="rose"] {
+  --primary-color: #FF0000;
+  --secondary-color: #FFA27F;
+}
+
+[data-theme="indigo"] {
+  --primary-color: #4B0082; // example indigo primary color
+  --secondary-color: #9370DB; // example indigo secondary color
+}
+
+[data-theme="vintage"] {
+  --primary-color: #C08081; // example vintage primary color
+  --secondary-color: #DAB894; // example vintage secondary color
+}
+
+// Example of applying the custom properties
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+// Custom button styles
+.button-delete {
+  background-color: red;
+  color: white;
+}
+
+.button-confirm {
+  background-color: green;
+  color: white;
+}
+
+.button-edit {
+  background-color: blue;
+  color: white;
+}
