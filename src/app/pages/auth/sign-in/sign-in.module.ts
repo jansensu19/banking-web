@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { SignInComponent } from './sign-in.component';
+import { AngularToastifyModule } from 'angular-toastify';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    AngularToastifyModule,
     RouterModule.forChild(routes)
   ],
   declarations: [SignInComponent]

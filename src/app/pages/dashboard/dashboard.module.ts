@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
+import { AngularToastifyModule } from 'angular-toastify';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
     RouterModule.forChild([
       { path: '', component: DashboardComponent }
       // Add other child routes if necessary
-    ])
+    ]),
+    AngularToastifyModule,
   ],
   exports: [],
   declarations: [DashboardComponent],
