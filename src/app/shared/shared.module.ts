@@ -8,7 +8,7 @@ import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     ThemeToggleComponent,
-    SchemeToggleComponent
+    SchemeToggleComponent,
   ],
   imports: [
     CommonModule,

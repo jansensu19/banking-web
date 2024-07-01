@@ -12,12 +12,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'sign-in', // Redirect root URL to sign-in initially
+    redirectTo: 'sign-in',
   },
   {
     path: '',
     component: LayoutComponent,
-    canActivate: [AuthGuard], // Apply AuthGuard to the whole layout
+    canActivate: [AuthGuard],
     children: [
       { path: 'dashboard', loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule) },
       // Add other authenticated routes here
@@ -25,12 +25,13 @@ const routes: Routes = [
   },
   { path: 'sign-in', loadChildren: () => import('./pages/auth/sign-in/sign-in.module').then(m => m.SignInModule), canActivate: [NoAuthGuard] },
   { path: 'sign-out', loadChildren: () => import('./pages/auth/sign-out/sign-out.module').then(m => m.SignOutModule), canActivate: [NoAuthGuard] },
-  { path: '**', component: Error404Component } // Redirect all unmatched routes to Error404Component
+  {path: '404-not-found', pathMatch: 'full', loadChildren: () => import('./pages/error/error-404/error-404.module').then(m => m.Error404Module)},
+  { path: '**', component: Error404Component }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthService] // Provide AuthService at the root level
+  providers: [AuthService]
 })
 export class AppRoutingModule { }

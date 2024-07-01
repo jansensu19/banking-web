@@ -1,0 +1,20 @@
+<div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [class]="isCollapsed ? 'w-20' : 'w-64'" class="bg-gray-800 text-white h-full flex flex-col transition-all duration-300">
+  <div class="flex items-center justify-between h-16 px-4">
+    <img src="../../../../assets/images/logo/logo.png" alt="Logo" class="h-8">
+  </div>
+
+  <!-- Iterate over menuCategories -->
+  <div class="flex flex-col flex-grow mt-4">
+    <ng-container *ngFor="let category of menuCategories">
+      <div class="px-4 py-2 text-xs text-primary uppercase">{{ category.name }}</div>
+
+      <!-- Iterate over items in each category -->
+      <nav class="flex flex-col">
+        <a [routerLink]="item.routerLink" class="flex items-center px-4 py-2 ml-3 hover:bg-gray-700" *ngFor="let item of category.items">
+          <mat-icon class="mr-5 text-gray-400">{{ item.icon }}</mat-icon>
+          <span class="text-sm text-gray-400" *ngIf="!isCollapsed">{{ item.label }}</span>
+        </a>
+      </nav>
+    </ng-container>
+  </div>
+</div>

@@ -1,25 +1,54 @@
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="w-full max-w-xs">
-    <form (ngSubmit)="onSubmit()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-      <h2 class="mb-6 text-2xl font-bold text-center text-gray-700">Login</h2>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-          Username
-        </label>
-        <input [(ngModel)]="username" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" required>
-      </div>
-      <div class="mb-6">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-          Password
-        </label>
-        <input [(ngModel)]="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" required>
-      </div>
-      <div class="flex items-center justify-between">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-          Login
-        </button>
-      </div>
-    </form>
+<div class="flex flex-row justify-between w-full">
+  <div class="flex flex-col justify-center items-center w-[75%] p-10 bg-gradient-to-b from-blue-800 via-light-blue to-blue-400 text-white">
+    <div class="welcome">
+      <h1 class="font-medium text-2xl">Welcome to</h1>
+    </div>
+
+    <div class="flex flex-col mt-20 justify-center items-center">
+      <img class="logo w-20" src="../../../../assets/images/logo/logo.png" alt="">
+      <h1 class="name font-medium text-2xl mt-5">Banker</h1>
+    </div>
+
+    <div class="detail flex text-center mt-20 w-[80%]">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi ipsum accusamus temporibus, a ducimus veniam ratione voluptates cum animi ut earum totam culpa, pariatur autem laborum! Rem expedita non sint!
+    </div>
+
+    <!-- <div class="m"></div> -->
+  </div>
+
+  <div class="flex items-center justify-center w-full min-h-screen">
+    <div class="w-full max-w-xs">
+      <form (ngSubmit)="onSubmit()" class="w-full mb-4">
+        <h2 class="my-10 text-4xl font-bold text-center text-gray-700">Login</h2>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-lg font-bold my-5" for="username">
+            Username
+          </label>
+          <input [(ngModel)]="username" name="username" class="w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" required>
+          <hr class="h-1 bg-blue-500">
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-lg font-bold my-5" for="password">
+            Password
+          </label>
+          <input [(ngModel)]="password" name="password" class="w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" required>
+          <hr class="h-1 bg-blue-500">
+          <div class="text-gray-500 text-sm hover:text-blue-300 cursor-pointer">
+            Forgot password
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between mt-10">
+          <button class="border hover:bg-blue-700 hover:text-white text-gray-500 font-bold py-2 px-10 rounded-full focus:outline-none focus:shadow-outline" type="submit">
+            Sign Up
+          </button>
+
+          <button class="border hover:bg-blue-700 hover:text-white text-gray-500 font-bold py-2 px-10 rounded-full focus:outline-none focus:shadow-outline" type="submit">
+            Sign In
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 
