@@ -44,3 +44,6 @@ Thumbs.db
 
 # Environment variables
 .env
+
+# Angular environment files
+/src/environments/

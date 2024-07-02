@@ -26,7 +26,7 @@ export class SignInComponent implements OnInit {
       }, 500);
       this.router.navigate(['/dashboard']);
     } else {
-      alert('Invalid credentials');
+      this._toastService.error('Invalid credentials');
     }
   }
 }
